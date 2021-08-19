@@ -1,0 +1,41 @@
+/*
+    Git Learning
+    Git操作步骤 
+    1.  cd 路径 进入文件
+    2.  git config --global user name "GithubUserName"
+        git config --global user email "GithubEmail"
+    3.  工作区       暂存区       远程仓库
+    4.  创建远程仓库 new repository in Github
+    5.  git init 命令 本地创建暂存区 
+        （Note 再上传文件时 创建 readme.md 文件 相当于说明书）
+    6.  工作区=>暂存区
+        git add 文件名
+        git add* 提交左右文件
+    
+        git commint -m "本次提交的描述"
+    7.  查看当前工作区的状态
+        git status
+
+        git checkout从暂存区把文件恢复到工作区 （当工作区出错时）
+    8.  git diff查看工作区和暂存区版本的区别
+    9.  git log 查看历史提交 
+    10. 恢复文件到指定版本 (从暂存区到工作区)
+        git reset --hard HEAD^ 退回到上个版本
+        git reset --hard HEAD^^退回两个版本
+        git reset --hard 版本号 来退回到指定版本
+    11. 将暂存区提交到远程仓库
+            通过sshm密匙授权本电脑
+            ssh-keygen -t rsa -C "GithubEmail"
+            查找隐藏存有密匙的文件
+            Github配置密匙 Setting--SSh and GPG keys--New SSH key--copy key into the box 
+        git remote add origin 仓库的地址 .git结束的
+        git push -u origin master
+    12. 第二次提交到远程仓库时
+        git add*
+        git commit -m "message"
+        git push
+    13. 从远程仓库克隆到本地
+        git clone
+    14. 从远程仓库更新到本地 同步本地代码
+        git pull
+*/
